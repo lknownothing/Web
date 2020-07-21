@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="Author" content="">
+    <meta name="Keywords" content="厉害很厉害" />
+    <meta name="Description" content="网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。" />
+    <title>Document</title>
+</head>
+<body>
+    <a name="name1">顶部</a> <br/>
+网页的head标签里面，表示的是页面的配置，有什么配置？<br/>
+
+<p>答：字符集charset，关键词keywords，告诉搜索引擎，这是干嘛的，利于提高搜索命中率，页面描述description：百度搜索结果就能显示这些语句，这个技术叫做SEO，页面标题，IE适配，视口viewpoint，表示窗口宽度等于屏幕宽度，iphone小图标。http-equiv="refresh", content=3,http://www.baidu.com"：3秒之后，自动跳转到百度页面</p>
+
+<li>title：网页标题 </li>
+<li>base：为页面所有链接规定默认地址或者默认目标，\<base href="/"\> 用于指定基础路劲，所有a链接之后都是这个路径为基准。</li>
+<li>meta: 提供页面的基本信息</li>
+<li>body: 主体标签</li>
+<li>link: 文档与外部资源的关系</li>
+
+<p link="red" alink="blue", vlink="green">显示鼠标点击，点击时，点击后的颜色<a href="">点击测试</a></p>
+
+<hr/ size="5" color="#0000FF">
+<p>html注释，感叹号！有声明的作用<!-- 我是 html 注释  --></p> 
+
+<P>文本标签：p, span, a, b, i, u, em。文本级标签只能放文字，图片，表单元素。比如，p里边就不能放h1这种标签。</P>
+
+<p>容器级标签：div, h, li, li, dt, dd. 容器级标签可以放任何东西</p>
+
+<br/>
+<p>div标签：把标签中的内容分割为独立的区块，必须独占一行<br/>
+span标签： 和div作用一直，但不换行。</p>
+
+<li>span举例</li>
+<p>
+	简介简介简介简介简介简介简介简介
+	<span>
+		<a href="">详细信息</a>
+		<a href="">购买</a>
+	</span>
+</p>
+<li>div举例</li>
+<div class="header">
+	<div class="logo">d1</div>
+	<div class="nav">d2</div>
+</div>
+<div class="content">
+	<div class="guanggao">d3</div>
+	<div class="dongxi">d4</div>
+</div>
+<div class="footer">d5</div>
+我们称这种模式叫做div+css：div负责布局、结构、分块, css负责样式。
+<h4>字体标签和超链接</h4>
+&lt;u&gt;下划线标记<u>把本行下划线。</u><br/>
+
+<font face="宋体">显示微软雅黑字体</font>
+&lt;a&gt;a是英语中anchor锚的意思，就好像从一个页面往另一个页面扔出了一个锚，是一个文本级标签。href是hypertext reference超文本地址的意思。
+<a href="#name1">回到顶部</a><br>
+
+<hr>
+definition list &lt;dl&gt; definie title，dt，definie Description, dd ,列表的列表项，如果不需要，可以不加。<br>
+举例：京东商品分类，一个大类就是dl，标题“电脑配件”就是dt, "鼠标"就是dd。<br>
+
+<h4>表格标签。</h4>
+<table border="1">
+	<tr>
+        <th>加粗单元格</th>
+		<td>td1</td>
+		<td>td2</td>
+		<td>td3</td>
+		<td>td4</td>
+    </tr>
+    <caption align="center">这是表格的caption</caption>
+</table>
+
+</body>
+</html>
+<h4>表单标签form</h4>
+<li>name: 表单的名称，用于JS来操作或者控制表单时使用</li>
+<li>id: 表单的名称，用于JS来操作或者控制表单时使用</li>
+<li>action: 指定表单数据的处理程序，一般还php，如action="login.php</li>
+<li>method: 表单数据的提交方式，一般取值，get和post。
+    <li>GET方式，将name="value"的形式追加到action指定的处理程序的后面，两者间用”?"隔开，表单的name之间用&隔开。</li>
+    <li>POST方式，将表单数据直接放松到action指定的处理程序，POST发送的数据不可见。Action指定的处理程序可以获取到表单数据。特点：可以提交海量信息，相对来说安全一些，提交的话剧格式是多样的（word、excel、rar、image）</li>
+</li>
+
+举例<br>
+<form>
+    姓名：<input value="呵呵" >逗比<br>
+    昵称：<input value="哈哈" readonly=""><br>
+    名字：<input type="text" value="name" disabled=""><br>
+    密码：<input type="password" value="pwd" size="50"><br>
+    性别：<input type="radio" name="gender" id="radio1" value="male" checked="">男
+          <input type="radio" name="gender" id="radio2" value="female" >女<br>
+    爱好：<input type="checkbox" name="love" value="eat">吃饭
+          <input type="checkbox" name="love" value="sleep">睡觉
+          <input type="checkbox" name="love" value="bat">打豆豆
+</form>
+
+四种按钮举例<br>
+<form>
+    <input type="button" value="普通按钮"><br>
+    <input type="submit"  value="提交按钮"><br>
+    <input type="reset" value="重置按钮"><br>
+    <input type="image" value="图片按钮1"><br>
+    <input type="image" src="1.jpg" width="800" value="图片按钮2"><br>
+    <input type="file" value="文件选择框">
+</form>
