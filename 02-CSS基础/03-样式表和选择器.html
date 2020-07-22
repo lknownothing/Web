@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" href="03-a.css">
+    <!-- link的rel有两种属性，stylesheet:定义的样式表，alternate stylesheet：候选的样式表，加入同时定义三个样式表，两个作为候选。 -->
+</head>
+<body>
+	<h1>我是大标题,蓝色字体，粉红色背景</h1>
+	<p>
+		我是内容，红色字体，斜体。
+    </p> <br>
+    <p>除了行内样式和内嵌样式表之外，还有最常用的第三种样式表，</p>
+    <li>引入外部样式表css文件
+        <li>采用link标签。link rel="stylesheet" href="a.css"。我们首先在html的统计目录下建一个a. css文件。说明里边的代码全是css代码，</li>
+        <li>采用import</li>
+    </li>
+<h3>CSS的四种选择器</h3>
+<li>1.标签选择器：不管藏得多深，都能被选择到</li>
+<li>2. ID选择器：#mytitle, 只针对声明了id=mytitle的有作用。注意html页面不能出现相同的id.</li>
+<li class="one two">3.类选择器: 规定用.来表示。同一个标签可以使用多个类选择器。用空格隔开表示</li>
+<li>4.通配符*，匹配任何标签。将匹配任何标签，不建议使用。</li>
+
+<h3>CSS的几种高级选择器</h3>
+<dd>1.后代选择器
+</dd>
+
+<div class="div1">
+    <p>举例来说，后代选择器选择的p字体是蓝色吗？效果表示，仍然继承了全体p的效果。</p>
+
+    <dd>2. 交集选择器：定义诸如h3.special的结构,表示在h3中的special类。</dd>
+
+    <h3>一些css3的选择器</h3>
+    <li>子代选择器，用符号&gt;表示。比如div &gt;p表示当代儿子，其他的不能更多了。</li>
+    <li>序选择器，ul li：first-child第一个儿子。</li>
+    <li>下一个兄弟选择器，用+号表示</li>
+
+    <h3>伪类（伪类选择器）</h3>
+    <dd>1. 静态伪类：只能用于超链接的样式，如下：
+        <li>:link 超链接点击之前</li>
+        <li>:visited 超链接被访问之后</li>
+    </dd>
+    <dd>2.动态伪类：针对所有标签都使用的样式</dd>  
+    <li>:hover 悬停，鼠标放到标签上的时候</li>
+    <li>:active 激活，点击标签，但是不松手</li>
+    <li>:focus 某个标签获得焦点时的样式，比如某个输入框获得焦点</li>
+<a href="https://cn.bing.com/?FORM=Z9FD1">bing搜索首页</a>
+</div>
+</body>
+</html>

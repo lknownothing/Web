@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+        /* 点代表class的css样式 */
+        /* #代表id的css样式 */
+		.img_wrap {
+			display: flex;
+		}
+
+		.img {
+			width: 200px;
+			height: 200px;
+			border:1px solid red;
+			background: url(http://img.smyhvae.com/20191006_1330.jpg) no-repeat;
+			margin-right: 20px;
+		}
+        /* 比较cover和contain的区别。cover只管覆盖，contai只管包含 */
+		.div1 {
+			background-size: cover;
+            /* 从边框开始显示北京图 */
+            background-origin: border-box;
+		}
+		.div2{
+			background-size: contain;
+            background-origin: content-box;
+            background-clip: content-box;
+		}
+        
+        .div1 {
+        width: 320px;
+        height: 320px;
+        border: 1px solid red;
+        background: url(http://img.smyhvae.com/20191006_1410.png) no-repeat;
+        background-size: cover;
+        /* 裁剪出圆形区域 */
+        clip-path: circle(50px at 100px 100px);
+        transition: clip-path .4s;
+        }
+
+        .div1:hover{
+        /* 鼠标悬停时，裁剪出更大的圆形 */
+        clip-path: circle(80px at 100px 100px);
+        }
+
+	</style>
+</head>
+
+<body>
+	<section class="img_wrap">
+		<div class="div1"></div>
+		<div class="img div2"></div>
+
+	</section>
+</body>
+</html>
